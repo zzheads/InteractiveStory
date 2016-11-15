@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -31,22 +32,39 @@
                                     <segue destination="o5Y-KQ-U7Q" kind="show" identifier="startAdventure" id="mvF-dw-5x5"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DTE-gm-h5n">
+                                <rect key="frame" x="40" y="519" width="295" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="S3X-IT-PGn"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rat-Ki-je8" secondAttribute="bottom" constant="48" id="730-P3-8sb"/>
                             <constraint firstItem="4iW-Id-SI0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8df-JM-Foa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DTE-gm-h5n" secondAttribute="trailing" constant="24" id="Agw-g8-bWI"/>
+                            <constraint firstItem="DTE-gm-h5n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="24" id="D9r-jp-cdc"/>
                             <constraint firstItem="rat-Ki-je8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KCt-vy-Dgz"/>
+                            <constraint firstItem="rat-Ki-je8" firstAttribute="top" secondItem="DTE-gm-h5n" secondAttribute="bottom" constant="40" id="NnI-Qm-iY6"/>
                             <constraint firstItem="4iW-Id-SI0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="UaJ-vN-MZr"/>
                             <constraint firstAttribute="trailing" secondItem="4iW-Id-SI0" secondAttribute="trailing" id="rAN-fr-1Th"/>
+                            <constraint firstItem="rat-Ki-je8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="525" id="xIj-Fe-5P1"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4iW-Id-SI0" secondAttribute="bottom" id="y2y-Vc-MiJ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bNV-qT-Rlb"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="DTE-gm-h5n" id="TUq-l4-QGN"/>
+                        <outlet property="textFieldBottomConstraint" destination="NnI-Qm-iY6" id="SRh-DY-fZg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="610" y="45"/>
+            <point key="canvasLocation" x="1135" y="53"/>
         </scene>
         <!--Page Controller-->
         <scene sceneID="3Vx-B9-S0V">
@@ -64,7 +82,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f9B-TQ-Ye4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1377" y="45"/>
+            <point key="canvasLocation" x="1932" y="45"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="arI-nN-ax3">
